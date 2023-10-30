@@ -59,5 +59,6 @@ jobs:
              # relative path to the place where source code with Dockerfile is located
              context: ./http-server
              # Note: tags has to be all lower-case
-             tags:  ${{secrets.DOCKERHUB_NAME}}/tp-devops-database:latest
+             tags:  ${{secrets.DOCKERHUB_NAME}}/tp-devops-http-server:latest
+             push: ${{ github.ref == 'refs/heads/main' }}
     
